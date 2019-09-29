@@ -1,0 +1,126 @@
+/* Aside Fixed */
+.home__aside{
+    background-color: #5242FF;
+    height: 100vh;
+    max-width: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &__menu {
+        padding-top: 20px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        list-style: none;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__item {
+            a {
+                display: inline-block;
+                padding: 0px 18px;
+                width: 100%;
+                margin: 8px 0;
+            }
+        }
+    }
+
+}
+
+/* Aside Open */
+.aside__menu {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    background-color: #272C33;
+    // padding: 0 50px;
+    display: none;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+
+        h2 {
+            color: #fff;
+            font-weight: 100;
+            @include type-1(20);
+        }
+
+        a {
+            text-decoration: none;
+            span {
+                display: block;
+                color: #fff;
+                background-color: #ED5564;
+                padding: 3px 7px;
+                font-weight: 100;
+                @include type-1(14);
+                    &:hover {
+                        background-color: #ce4c57;
+                    }
+            }
+        }
+
+        
+    }
+
+    &__content {
+
+        &__menu {
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    display: block;
+                    @include type-1(16);
+                }
+            }
+        }
+    }
+
+    ul {
+        
+        li {
+            padding: 15px 10px 15px 35px;
+            
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+              
+                i {
+                    color: #03A9F4;
+                }
+
+                p {
+                    margin-left: 20px;
+                    color: #fff;
+                    font-weight: 300;
+                    @include type-1(16);
+
+                    &:hover {
+                        background-color: #5242FF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ativo {
+    width: 280px;
+    right: 100px;
+    display: block;
+}
