@@ -133,3 +133,40 @@ $bootstrap-xl: 1200px;
 
 }
 
+
+.btnLeftOwl {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  border: none;
+  width: 3.7%;
+  height: 57px;
+  color: #fff;
+  background-color: #72364B;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+  span {
+    font-size: 30px;
+  }
+} 
+
+.owl-nav {
+
+  button:nth-child(2) {
+    position: absolute;
+    top: 280px;
+    right: 0;
+    border: none;
+    width: 3.7%;
+    height: 57px;
+    color: #fff;
+    background-color: #72364B;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+    span {
+      font-size: 30px;
+    }
+  }
+}

@@ -7671,6 +7671,36 @@ ul, li {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
+.btnLeftOwl {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  border: none;
+  width: 3.7%;
+  height: 57px;
+  color: #fff;
+  background-color: #72364B;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease; }
+  .btnLeftOwl span {
+    font-size: 30px; }
+
+.owl-nav button:nth-child(2) {
+  position: absolute;
+  top: 280px;
+  right: 0;
+  border: none;
+  width: 3.7%;
+  height: 57px;
+  color: #fff;
+  background-color: #72364B;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease; }
+  .owl-nav button:nth-child(2) span {
+    font-size: 30px; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -7831,6 +7861,9 @@ table {
   height: 500px;
   width: 100%;
   position: relative; }
+  @media (max-width: 575.98px) {
+    .coliving .bg-left {
+      order: 2; } }
   .coliving .bg-left p {
     position: absolute;
     text-transform: uppercase;
@@ -7846,6 +7879,12 @@ table {
   background-size: cover;
   height: 500px;
   width: 100%; }
+  @media (max-width: 575.98px) {
+    .coliving .bg-right {
+      background-image: url("./img/mobile/coliving.png");
+      background-size: contain;
+      height: 256px;
+      order: 1; } }
 
 /* End COliving */
 /* TABS */
@@ -7880,13 +7919,20 @@ table {
 /* End TABS */
 /* Slide 02 */
 .slide-02 {
-  background-color: #72364b; }
+  background-color: #72364b;
+  margin-top: -10px; }
   .slide-02__tabs {
     padding: 25px 0; }
+    @media (max-width: 575.98px) {
+      .slide-02__tabs {
+        overflow: scroll; } }
     .slide-02__tabs__item {
       background-color: transparent;
       padding: 10px 50px;
       border: solid 1px #fff; }
+      @media (max-width: 575.98px) {
+        .slide-02__tabs__item {
+          margin: 0 30px; } }
       .slide-02__tabs__item:hover {
         background-color: #fff; }
         .slide-02__tabs__item:hover p, .slide-02__tabs__item:hover .number, .slide-02__tabs__item:hover .text {
@@ -7902,18 +7948,30 @@ table {
           text-transform: uppercase;
           font-family: "Montserrat", sans-serif;
           font-size: 0.875em; }
+          @media (max-width: 575.98px) {
+            .slide-02__tabs__item a p {
+              font-family: "Montserrat", sans-serif;
+              font-size: 0.75em; } }
         .slide-02__tabs__item a .number {
           color: #fff;
           letter-spacing: 1.5px;
           font-weight: 700;
           font-family: "Montserrat", sans-serif;
           font-size: 0.875em; }
+          @media (max-width: 575.98px) {
+            .slide-02__tabs__item a .number {
+              font-family: "Montserrat", sans-serif;
+              font-size: 0.75em; } }
         .slide-02__tabs__item a .text {
           color: #fff;
           letter-spacing: 1.5px;
           font-weight: 700;
           font-family: "Montserrat", sans-serif;
           font-size: 0.625em; }
+          @media (max-width: 575.98px) {
+            .slide-02__tabs__item a .text {
+              font-family: "Montserrat", sans-serif;
+              font-size: 0.75em; } }
 
 /* End Slide 02 */
 /* Section Potencial*/
@@ -7924,6 +7982,11 @@ table {
   background-size: cover;
   height: 500px;
   width: 100%; }
+  @media (max-width: 575.98px) {
+    .section-potencial .bg-left {
+      background-image: url("./img/mobile/potencial-mobile.png");
+      background-size: contain;
+      order: 1; } }
   .section-potencial .bg-left p {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -7938,6 +8001,9 @@ table {
   background-size: cover;
   height: 500px;
   width: 100%; }
+  @media (max-width: 575.98px) {
+    .section-potencial .bg-right {
+      order: 2; } }
 
 /* End Section Potencial*/
 /* Diferencial */
@@ -7946,6 +8012,12 @@ table {
   background-repeat: no-repeat;
   background-position: center;
   height: 500px; }
+  @media (max-width: 575.98px) {
+    .diferencial .bg-left {
+      background-image: url("./img/mobile/diferencial-left.png");
+      background-size: contain;
+      height: 162px;
+      order: 2; } }
 .diferencial .bg-right .box-01 {
   background-color: #72364b;
   color: #fff;
@@ -7956,6 +8028,10 @@ table {
   height: 250px;
   font-family: "Montserrat", sans-serif;
   font-size: 0.875em; }
+  @media (max-width: 575.98px) {
+    .diferencial .bg-right .box-01 {
+      height: 237px;
+      order: 2; } }
 .diferencial .bg-right .bg-escuro {
   background-color: #72364b; }
 .diferencial .bg-right .bg-claro {
@@ -7968,7 +8044,23 @@ table {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 0; }
+  padding: 140px 0;
+  /** Mobile */
+  /** end Mobile */
+  /** Slick */
+  /** end Slick */ }
+  @media (max-width: 575.98px) {
+    .localidade {
+      background-position: unset; } }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .localidade {
+      background-position: unset; } }
+  @media (max-width: 575.98px) {
+    .localidade .row-top {
+      display: none; } }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .localidade .row-top {
+      display: none; } }
   .localidade .row-top .box-01:hover .img .block-title {
     padding: 91px 20px;
     transition: all 0.7s;
@@ -8000,6 +8092,12 @@ table {
         font-size: 0.9375em; }
   .localidade .row-bottom {
     margin-top: 80px; }
+    @media (max-width: 575.98px) {
+      .localidade .row-bottom {
+        display: none; } }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .localidade .row-bottom {
+        display: none; } }
     .localidade .row-bottom .box-01:hover .img .block-title {
       padding: 91px 20px;
       transition: all 0.7s;
@@ -8029,12 +8127,61 @@ table {
           transition: all 0.7s;
           font-family: "Montserrat", sans-serif;
           font-size: 0.9375em; }
+  .localidade .row-mobile {
+    display: none; }
+    @media (max-width: 575.98px) {
+      .localidade .row-mobile {
+        display: block; } }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .localidade .row-mobile {
+        display: block; } }
+    .localidade .row-mobile .box-01:hover .img .block-title {
+      padding: 91px 20px;
+      transition: all 0.7s;
+      background-color: #0e12098f;
+      text-align: center; }
+    .localidade .row-mobile .box-01 .img {
+      position: relative; }
+      .localidade .row-mobile .box-01 .img .block-title {
+        position: absolute;
+        bottom: 0px;
+        transition: all 0.7s;
+        left: 0px;
+        padding-left: 15px;
+        padding-bottom: 30px;
+        padding-top: 15px;
+        width: 100%;
+        color: #fff;
+        background-color: #0e1209cc; }
+        .localidade .row-mobile .box-01 .img .block-title p {
+          font-weight: 300;
+          transition: all 0.7s;
+          padding-bottom: 4px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.8125em; }
+        .localidade .row-mobile .box-01 .img .block-title h4 {
+          font-weight: 700;
+          transition: all 0.7s;
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.9375em; }
+  .localidade .slick-next {
+    background-color: transparent !important; }
+    .localidade .slick-next:before {
+      color: #c5416f !important; }
+  .localidade .slick-prev {
+    background-color: transparent !important;
+    z-index: 1; }
+    .localidade .slick-prev:before {
+      color: #c5416f !important; }
 
 /* End Localidade */
 /* Newsletter */
 .newsletter {
   background-color: #fff;
   padding: 40px 0; }
+  @media (max-width: 575.98px) {
+    .newsletter__block {
+      margin-left: 0% !important; } }
   .newsletter form input {
     width: 50%;
     padding: 10px;
@@ -8045,6 +8192,9 @@ table {
     border-bottom-left-radius: 4px;
     font-family: "Montserrat", sans-serif;
     font-size: 0.8125em; }
+    @media (max-width: 575.98px) {
+      .newsletter form input {
+        display: none; } }
   .newsletter form button {
     color: #fff;
     text-transform: uppercase;
@@ -8057,18 +8207,39 @@ table {
     letter-spacing: 1.3px;
     font-family: "Montserrat", sans-serif;
     font-size: 1em; }
+    @media (max-width: 575.98px) {
+      .newsletter form button {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding: 14px 40px 12px; } }
   .newsletter p {
     color: #72364b;
     letter-spacing: 1px;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     font-size: 0.6875em; }
+    @media (max-width: 575.98px) {
+      .newsletter p {
+        display: none; } }
 
 /* End Newsletter */
 /* Contato */
 .contato {
   padding: 40px 0;
   background-color: #222222; }
+  @media (max-width: 575.98px) {
+    .contato .logo-mac {
+      order: 1 !important; }
+    .contato .logo-956 {
+      order: 2;
+      margin: 40px 0; }
+    .contato .title-logo {
+      order: 3; }
+    .contato .redeSocial {
+      order: 4;
+      flex-direction: column; }
+      .contato .redeSocial li:nth-child(2) {
+        margin: 30px 0 !important; } }
   .contato .block-title {
     color: #fff;
     text-align: center;

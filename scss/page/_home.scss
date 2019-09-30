@@ -6,9 +6,6 @@
         display: none;
     }
 
-    .wrapper {
-        // align-items: center;
-    }
 
     /* Menu */
     &__nav {
@@ -135,6 +132,9 @@
         height: 500px;
         width: 100%;
         position: relative;
+        @include media-breakpoint-only(xs) {
+            order: 2;
+        }
 
         p {
             position: absolute;
@@ -154,6 +154,13 @@
         background-size: cover;
         height: 500px;
         width: 100%;
+
+        @include media-breakpoint-only(xs) {
+            background-image: url('./img/mobile/coliving.png');
+            background-size: contain;
+            height: 256px;
+            order: 1;
+         }
     }
 }
 /* End COliving */
@@ -200,13 +207,25 @@
 /* Slide 02 */
 .slide-02 {
     background-color: #72364b;
-
+    margin-top: -10px;
+    @include media-breakpoint-only(xs) {
+        // display: none;
+    }
+    
     &__tabs {
         padding: 25px 0;
+        @include media-breakpoint-only(xs) {
+            overflow: scroll;
+        }
+
         &__item {
             background-color: transparent;
             padding: 10px 50px;
             border: solid 1px #fff;
+
+            @include media-breakpoint-only(xs) {
+                margin: 0 30px;
+            }
                 &:hover {
                     background-color: #fff;
 
@@ -226,6 +245,10 @@
                     font-weight: 300;
                     text-transform: uppercase;
                     @include type-1(14);
+
+                    @include media-breakpoint-only(xs) {
+                        @include type-1(12);
+                    }
                 }
 
                 .number {
@@ -233,6 +256,10 @@
                     letter-spacing: 1.5px;
                     font-weight: 700;
                     @include type-1(14);
+                    
+                    @include media-breakpoint-only(xs) {
+                        @include type-1(12);
+                    }
                 }
 
                 .text {
@@ -240,6 +267,10 @@
                     letter-spacing: 1.5px;
                     font-weight: 700;
                     @include type-1(10);
+
+                    @include media-breakpoint-only(xs) {
+                        @include type-1(12);
+                    }
                 }
             }
         }
@@ -256,6 +287,12 @@
         background-size: cover;
         height: 500px;
         width: 100%;
+
+        @include media-breakpoint-only(xs) {
+            background-image: url('./img/mobile/potencial-mobile.png');
+            background-size: contain;
+            order: 1;
+        }
 
         p {
             text-transform: uppercase;
@@ -274,6 +311,9 @@
         background-size: cover;
         height: 500px;
         width: 100%;
+        @include media-breakpoint-only(xs) {
+            order: 2;
+        }
     }
 }
 /* End Section Potencial*/
@@ -286,6 +326,12 @@
         background-position: center;
         height: 500px;
         // width: 100%;
+        @include media-breakpoint-only(xs) {
+            background-image: url('./img/mobile/diferencial-left.png');
+            background-size: contain;
+            height: 162px;
+            order: 2;
+        }
     }
 
     .bg-right {
@@ -298,6 +344,11 @@
             flex-direction: column;
             height: 250px;
             @include type-1(14);
+
+            @include media-breakpoint-only(xs) {
+                height: 237px;
+                order: 2;
+            }
         }
 
         .bg-escuro {
@@ -319,8 +370,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 140px 0;
+    @include media-breakpoint-only(xs) {
+        background-position: unset;
+     }
+     @include media-breakpoint-only(sm) {
+        background-position: unset;
+     }
+
+    
 
     .row-top {
+        @include media-breakpoint-only(xs) {
+            display: none;
+         }
+         @include media-breakpoint-only(sm) {
+            display: none;
+        }
         .box-01 {
             &:hover {
              
@@ -369,6 +434,13 @@
 
     .row-bottom {
         margin-top: 80px;
+            @include media-breakpoint-only(xs) {
+                display: none;
+            }
+            @include media-breakpoint-only(sm) {
+                display: none;
+            }
+
         .box-01 {
             &:hover {
              
@@ -414,6 +486,82 @@
             }
         }
     }
+
+    /** Mobile */
+    .row-mobile {
+        display: none;
+
+
+        @include media-breakpoint-only(xs) {
+            display: block;
+        }
+        @include media-breakpoint-only(sm) {
+            display: block;
+        }
+
+        .box-01 {
+            &:hover {
+             
+                .img {
+
+                    .block-title {
+                        padding: 91px 20px;
+                        transition: all 0.7s;
+                        background-color: #0e12098f;
+                        text-align: center;
+                    }
+                }
+            }
+            
+            .img {
+                position: relative;
+
+                .block-title{
+                    position: absolute;
+                    bottom: 0px;
+                    transition: all 0.7s;
+                    left: 0px;
+                    padding-left: 15px;
+                    padding-bottom: 30px;
+                    padding-top: 15px;
+                    width: 100%;
+                    color: #fff;
+                    background-color: #0e1209cc;
+
+                    p {
+                        font-weight: 300;
+                        transition: all 0.7s;
+                        padding-bottom: 4px;
+                        @include type-1(13);
+                    }
+
+                    h4 {
+                        font-weight: 700;
+                        transition: all 0.7s;
+                        @include type-1(15);
+                    }
+                }
+            }
+        }
+
+    }
+    /** end Mobile */
+
+    /** Slick */
+    .slick-next {
+        background-color: transparent !important;
+        &:before {
+            color: #c5416f !important;
+        } 
+    }
+    .slick-prev {
+        background-color: transparent !important;
+        z-index: 1;
+        &:before {
+            color: #c5416f !important;
+        } 
+    }
+    /** end Slick */
 }
 /* End Localidade */
 
@@ -421,6 +569,12 @@
 .newsletter {
     background-color: #fff;
     padding: 40px 0;
+
+    &__block {
+        @include media-breakpoint-only(xs) {
+            margin-left: 0% !important;
+        }
+    }
 
     form {
 
@@ -433,6 +587,10 @@
             border-top-left-radius: 4px; 
             border-bottom-left-radius: 4px; 
             @include type-1(13);
+
+            @include media-breakpoint-only(xs) {
+                display: none;
+            }
         }
 
         button {
@@ -446,6 +604,12 @@
             background-color: #72364b;
             letter-spacing: 1.3px;
             @include type-1(16);
+
+            @include media-breakpoint-only(xs) {
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                padding: 14px 40px 12px;
+            }
         }
     }
     p {
@@ -453,6 +617,11 @@
         letter-spacing: 1px;
         font-weight: 500;
         @include type-1(11);
+
+        @include media-breakpoint-only(xs) { 
+            display: none;
+        }
+        
     }
 }
 /* End Newsletter */
@@ -461,6 +630,31 @@
 .contato {
     padding: 40px 0;
     background-color: #222222;
+
+    @include media-breakpoint-only(xs) { 
+        .logo-mac {
+            order: 1 !important;
+        }
+
+        .logo-956 {
+            order: 2;
+            margin: 40px 0;
+        }
+
+        .title-logo {
+            order: 3;
+        
+        }
+
+        .redeSocial {
+            order: 4;
+            flex-direction: column;
+
+            li:nth-child(2) {
+                margin: 30px 0 !important;
+            }
+        }
+    }
 
     .block-title {
         color: #fff;
@@ -481,6 +675,7 @@
             }
         }
     }
+
 }
 
 /* End Contato */
