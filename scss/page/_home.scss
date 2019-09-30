@@ -1,29 +1,67 @@
 .header {
     position: fixed;
     width: 100%;
+    z-index: 10;
 
     @include media-breakpoint-only(xs) {
-        display: none;
+        // display: none;
     }
 
 
     /* Menu */
     &__nav {
+        display: block;
+
+        @include media-breakpoint-only(xs) {
+            flex-direction: column;
+            height: 0;
+            display: none;
+        }
+        @include media-breakpoint-only(sm) {
+            display: none;
+        }
+        @include media-breakpoint-only(md) {
+            display: none;
+        }
+       
 
         &__menu {
             // display: flex;
-
+            @include media-breakpoint-only(xs) {
+                flex-direction: column;
+                position: relative;
+                top: 67px;
+                left: -20px;
+                background-color: #626262;
+                width: 108%;
+                padding: 15px 0;
+            }            
+            
             li {
+                @include media-breakpoint-only(xs) { 
+                   padding: 4px 0;
+                }
                 a {
                     color: #fff;
                     padding: 0 20px;
                     @include type-1(13);
+
                 }
             }
         }
     }
 
     &__contact {
+
+        /** Menu Mobile */
+        &__menu-mobile {
+            display: none;
+
+            @include media-breakpoint-only(xs) {
+                display: block;
+            }
+        }
+        /** End Menu Mobile */
 
         &__item {
 
@@ -32,26 +70,43 @@
                 margin: 0 10px;
                 @include type-1(13);
 
+                @include media-breakpoint-only(xs) {
+                    @include type-1(10);
+                }
+                @include media-breakpoint-only(sm) {
+                    @include type-1(11);
+                }
+                @include media-breakpoint-only(md) {
+                    @include type-1(13);
+                }
+
                 img {
                     margin-left: 13px;
                 }
             }
         }
 
-        .logo {
-            padding: 0;
-            margin: 0; 
-        }
+    }
+
+    
+    .logo {
+        padding: 0;
+        margin: 0; 
+    
     }
 
     /* End Menu */
-
+.ativo {
+    display: block !important;
+}
 }
 
+/** Introdução Site */
 .introducao {
     background-image: url('./img/bg-home.png');
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 768px;
     width: 100%; 
 
@@ -135,6 +190,10 @@
         @include media-breakpoint-only(xs) {
             order: 2;
         }
+        @include media-breakpoint-only(md) {
+            height: 271px;
+        }
+
 
         p {
             position: absolute;
@@ -157,10 +216,14 @@
 
         @include media-breakpoint-only(xs) {
             background-image: url('./img/mobile/coliving.png');
-            background-size: contain;
+            // background-size: contain;
             height: 256px;
             order: 1;
          }
+         @include media-breakpoint-only(md) {
+            height: 271px;
+            background-size: contain;
+        }
     }
 }
 /* End COliving */
@@ -217,6 +280,12 @@
         @include media-breakpoint-only(xs) {
             overflow: scroll;
         }
+        @include media-breakpoint-only(sm) {
+            overflow: scroll;
+        }
+        @include media-breakpoint-only(md) {
+            overflow: scroll;
+        }
 
         &__item {
             background-color: transparent;
@@ -226,6 +295,16 @@
             @include media-breakpoint-only(xs) {
                 margin: 0 30px;
             }
+            @include media-breakpoint-only(sm) {
+                margin: 0 15px;
+            }
+            @include media-breakpoint-only(md) {
+                margin: 0 15px;
+            }
+            @include media-breakpoint-only(lg) {
+                padding: 10px 33px;
+            }
+            
                 &:hover {
                     background-color: #fff;
 
@@ -289,6 +368,18 @@
         width: 100%;
 
         @include media-breakpoint-only(xs) {
+            background-image: url('./img/mobile/potencial-mobile.png');
+            background-size: contain;        
+            height: 340px;
+            order: 1;
+        }
+        @include media-breakpoint-only(sm) {
+            background-image: url('./img/mobile/potencial-mobile.png');
+            background-size: contain;
+            height: 340px;
+            order: 1;
+        }
+        @include media-breakpoint-only(md) {
             background-image: url('./img/mobile/potencial-mobile.png');
             background-size: contain;
             order: 1;
@@ -415,17 +506,38 @@
                     color: #fff;
                     background-color: #0e1209cc;
 
+                    @include media-breakpoint-only(sm) {
+                        padding-bottom: 15px;
+                    }
+                    @include media-breakpoint-only(md) {
+                        padding-bottom: 15px;
+                    }
+
                     p {
                         font-weight: 300;
                         transition: all 0.7s;
                         padding-bottom: 4px;
                         @include type-1(13);
+
+                        @include media-breakpoint-only(sm) {
+                            @include type-1(12);
+                        }
+                        @include media-breakpoint-only(md) {
+                            @include type-1(12);
+                        }
                     }
 
                     h4 {
                         font-weight: 700;
                         transition: all 0.7s;
                         @include type-1(15);
+
+                        @include media-breakpoint-only(sm) {
+                            @include type-1(12);
+                        }
+                        @include media-breakpoint-only(md) {
+                            @include type-1(12);
+                        }
                     }
                 }
             }
@@ -469,18 +581,38 @@
                     width: 100%;
                     color: #fff;
                     background-color: #0e1209cc;
+                    @include media-breakpoint-only(sm) {
+                        padding-bottom: 15px;
+                    }
+                    @include media-breakpoint-only(md) {
+                        padding-bottom: 15px;
+                    }
 
                     p {
                         font-weight: 300;
                         transition: all 0.7s;
                         padding-bottom: 4px;
                         @include type-1(13);
+
+                        @include media-breakpoint-only(sm) {
+                            @include type-1(12);
+                        }
+                        @include media-breakpoint-only(md) {
+                            @include type-1(12);
+                        }
                     }
 
                     h4 {
                         font-weight: 700;
                         transition: all 0.7s;
                         @include type-1(15);
+
+                        @include media-breakpoint-only(sm) {
+                            @include type-1(12);
+                        }
+                        @include media-breakpoint-only(md) {
+                            @include type-1(12);
+                        }
                     }
                 }
             }

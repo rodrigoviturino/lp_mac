@@ -146,6 +146,18 @@ $bootstrap-xl: 1200px;
   text-align: center;
   opacity: 0.5;
   transition: opacity 0.15s ease;
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    top: 130px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    top: 130px;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    top: 190px;
+   }
+
   span {
     font-size: 30px;
   }
@@ -165,8 +177,23 @@ $bootstrap-xl: 1200px;
     text-align: center;
     opacity: 0.5;
     transition: opacity 0.15s ease;
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      top: 130px;
+    }
+  
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      top: 130px;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      top: 190px;
+     }
+
     span {
       font-size: 30px;
     }
+
   }
+
+
 }

@@ -24,6 +24,9 @@ $font-2: "Nunito", sans-serif;
 @mixin type-1($size){
 
     font-family: $font-1;
+    @if $size == 9 {
+        font-size:em(9);
+    }
     @if $size == 10 {
         font-size:em(10);
     }
