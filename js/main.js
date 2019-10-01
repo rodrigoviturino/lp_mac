@@ -175,3 +175,79 @@ btnMobile.addEventListener('click', function(){
   document.querySelector('.header__nav').classList.toggle('ativo');
 });
 /** End Menu Mobile */
+
+
+    /** SCROLL SUAVE */
+
+    function initScrollSuave() {
+      const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  
+      function scrollToSection(event) {
+          event.preventDefault();
+          const href = event.currentTarget.getAttribute("href");  
+          const section = document.querySelector(href);
+          
+          section.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+          }); 
+          
+      }
+  
+      linksInternos.forEach( (link) => {
+          link.addEventListener('click', scrollToSection);
+      });
+  }
+
+initScrollSuave();
+
+function initAnimacaoScroll() {
+
+    const sections = document.querySelectorAll('.js-scroll');
+
+    if( sections.length) {
+        const windowMetade = window.innerHeight * 0.6;
+
+        function animaScroll() {
+            sections.forEach( (section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                
+                const isSectionVisible = (sectionTop - windowMetade) < 0;
+                
+                if( isSectionVisible ) {
+                    section.classList.add('menuScroll');
+                } else {
+                    section.classList.remove('menuScroll');
+                }
+                
+            });
+        }
+
+        animaScroll();
+
+        window.addEventListener('scroll', animaScroll);
+    }
+}
+
+initAnimacaoScroll();
+
+
+
+// $(document).ready(function(){
+//     alert($(".header").scrollTop() + " px");
+// });
+
+
+$(document).ready(function() {
+	var s = $(".header");
+	var pos = s.position();					   
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= pos.top & windowpos <=600) {
+			s.removeClass("kkk");
+		} else {
+			s.addClass("kkk");	
+		}
+	});
+});

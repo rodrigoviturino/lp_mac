@@ -14,6 +14,13 @@
     <title>LP - MAC</title>
 </head>
 <body>
+
+<style>
+.kkk {
+    transition: all 0.7s;
+    background-color: #000000c9 !important;
+}
+</style>
     
 <header class="header">
         <div class="container">
@@ -22,19 +29,24 @@
                 <div class="col-md-7">
 
                     <nav class="header__nav">
-                        <ul class="header__nav__menu d-flex">
+                        <ul class="header__nav__menu d-flex js-menu">
+
                             <li class="header__nav__menu__item">
-                                <a href="#">Projeto</a>
+                                <a href="#projeto">Projeto</a>
                             </li>
+
                             <li>
-                                <a href="#">Plantas</a>
+                                <a href="#plantas">Plantas</a>
                             </li>
+
                             <li>
-                                <a href="#">Invista no Is perdizes</a>
+                                <a href="#perdizes">Invista no Is perdizes</a>
                             </li>
+
                             <li>
-                                <a href="#">O bairro</a>
+                                <a href="#bairro">O bairro</a>
                         </li>
+
                     </ul>
                 </nav>
             </div>
@@ -102,7 +114,7 @@
 </section>
 
 <!-- Coliving -->
-<section class="coliving">
+<section class="coliving js-scroll" id="projeto">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 bg-left ">
@@ -131,7 +143,7 @@
 
 
 <!-- Slide 02 -->
-<section class="slide-02">
+<section class="slide-02 js-scroll" id="plantas">
 
         <div class="container">
             <ul class="slide-02__tabs d-flex justify-content-between js-tabmenu ">
@@ -378,7 +390,7 @@
 <!-- End Section Potencial -->
 
 <!-- Diferencial -->
-<section class="diferencial">
+<section class="diferencial js-scroll" id="perdizes">
     <div class="container-fluid">
         <div class="row">
 
@@ -442,7 +454,7 @@
 <!-- End Diferencial -->
 
 <!-- Localidades -->
-<section class="localidade">
+<section class="localidade js-scroll" id="bairro">
     <div class="container">
         <div class="row">
             <div class="col-md-4"></div>
